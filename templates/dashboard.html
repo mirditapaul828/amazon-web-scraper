@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Product Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Amazon Product Dashboard</h1>
+
+<!--    <h2>Product Ratings</h2>-->
+<!--    <div id="rating_bar_chart"></div>-->
+
+<!--    <h2>Product Prices vs. Ratings</h2>-->
+<!--    <div id="price_rating_scatter"></div>-->
+
+    <h2>Product Details</h2>
+    <div id="product_table"></div>
+
+    <script>
+<!--        // Embed the Plotly charts in the HTML page-->
+<!--        var rating_bar_chart = {{ rating_bar_chart|safe }};-->
+<!--        Plotly.newPlot('rating_bar_chart', rating_bar_chart.data, rating_bar_chart.layout);-->
+
+<!--        var price_rating_scatter = {{ price_rating_scatter|safe }};-->
+<!--        Plotly.newPlot('price_rating_scatter', price_rating_scatter.data, price_rating_scatter.layout);-->
+
+        var product_table = {{ product_table.to_json()|safe }};
+        Plotly.newPlot('product_table', product_table);
+    </script>
+</body>
+</html>
